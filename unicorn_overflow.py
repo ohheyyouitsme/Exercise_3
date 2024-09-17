@@ -2,7 +2,7 @@ import random
 import time
 
 # Welcome to Unicorn Overflow 🦄!
-# In this magical script, we summon unicorns and get a whimsical fortune!
+# In this magical script, we summon unicorns, get a whimsical fortune, and receive your very own unicorn name!
 
 def summon_unicorn():
     unicorn_moods = [
@@ -31,6 +31,12 @@ def unicorn_fortune():
     ]
     return random.choice(fortunes)
 
+def unicorn_name_generator():
+    first_names = ["Sparkle", "Rainbow", "Glitter", "Star", "Moonbeam", "Mystic", "Twilight", "Sunny", "Shimmer", "Aurora"]
+    last_names = ["Prancer", "Glimmerhoof", "Stardust", "Dreamwhisper", "Skydancer", "Silverbell", "Sunshine", "Shadowmane", "Nightwind", "Dewdrop"]
+    
+    return f"{random.choice(first_names)} {random.choice(last_names)}"
+
 def main():
     print("🦄 Welcome to Unicorn Overflow! Let's summon some unicorns. 🦄")
     
@@ -44,6 +50,13 @@ def main():
         print("\n🔮 The Unicorn Fortune Teller has something to say! 🔮")
         time.sleep(1)
         print(unicorn_fortune())
+
+        # Give the user their own unicorn name!
+        time.sleep(1)
+        print("\n✨ But wait! Every unicorn needs a name... ✨")
+        time.sleep(1)
+        print(f"Your unicorn name is: {unicorn_name_generator()} 🦄")
+        
     else:
         print("🚫 No unicorns for you today. Maybe next time!")
 
