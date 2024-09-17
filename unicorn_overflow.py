@@ -2,7 +2,7 @@ import random
 import time
 
 # Welcome to Unicorn Overflow 🦄!
-# In this magical script, we summon unicorns and see what kind of mood they’re in!
+# In this magical script, we summon unicorns and get a whimsical fortune!
 
 def summon_unicorn():
     unicorn_moods = [
@@ -21,6 +21,16 @@ def unicorn_party():
         mood = summon_unicorn()
         print(mood)
 
+def unicorn_fortune():
+    fortunes = [
+        "🔮 You will discover a hidden talent for rainbow dancing! 🌈",
+        "🔮 Beware of glitter storms... they're fun but messy! ✨",
+        "🔮 A unicorn friend will bring you unexpected joy today. 🦄",
+        "🔮 You will soon find yourself on a journey to Candyland. 🍬",
+        "🔮 Magical things are in store for you, but only if you believe! 🪄"
+    ]
+    return random.choice(fortunes)
+
 def main():
     print("🦄 Welcome to Unicorn Overflow! Let's summon some unicorns. 🦄")
     
@@ -28,6 +38,12 @@ def main():
     
     if user_input == "yes":
         unicorn_party()
+        
+        # After summoning unicorns, let's reveal a fortune!
+        time.sleep(1)
+        print("\n🔮 The Unicorn Fortune Teller has something to say! 🔮")
+        time.sleep(1)
+        print(unicorn_fortune())
     else:
         print("🚫 No unicorns for you today. Maybe next time!")
 
